@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <title>Weight Management Strategies</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #eaf4ea;
-            color: #333;
-        }
+	
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #eaf4ea;
+    color: #333;
+}
 
-        .header {
+.header {
             width: 100%;
             height: 150px;
             background-color: #2e7d32;
@@ -27,6 +28,24 @@
             font-weight: bold;
             font-family: Palatino, serif;
         }
+		
+		.back-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+			position: absolute;
+			top: 20px;
+			left: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #45a049;
+        }
 
         .container {
             display: flex;
@@ -35,7 +54,6 @@
             padding: 20px;
         }
 
-        /* Main Content */
         .content {
             flex: 1;
             padding: 20px;
@@ -83,15 +101,12 @@
 
         .physical-section {
             display: flex;
-            align-items: flex-start; /* Align image and text at the top */
+            align-items: flex-start;
             justify-content: space-between;
         }
 
-
-
-        /* New class for the description box */
         .description-container {
-            max-width: 1200px; /* Control the width */
+            max-width: 1200px; 
             margin: 0 auto;
             padding: 20px;
             box-sizing: border-box;
@@ -99,19 +114,17 @@
 
         .description-container p,
         .description-container ul {
-            margin-left: 20px; /* Add left margin to create space */
-            margin-right: 20px; /* Add right margin for symmetry */
+            margin-left: 20px;
+            margin-right: 20px;
 			text-align: justify;
         }
 
         .description-container ul {
-            padding-left: 20px; /* Indentation for list items */
+            padding-left: 20px;
         }
 		
-
-        /* Style for the input box */
         .input-box {
-            width: 80%; /* Set the width of the input box */
+            width: 80%; 
             padding: 10px;
             font-size: 16px;
             margin-bottom: 10px;
@@ -130,7 +143,6 @@
             background-color: #45a049;
         }
 		
-	      /* Styling for the list container */
         .list-container {
             padding: 20px;
             background-color: #fff;
@@ -139,7 +151,6 @@
             box-sizing: border-box;
 			line-height: 1.7;
         }
-		
 		
     .video-section h2 {
       font-size: 20px;
@@ -159,7 +170,6 @@
       .slider-container {
         max-width: 100%;
       }
-    }
 
     @media (max-width: 480px) {
       .card {
@@ -173,6 +183,7 @@
     <div class="header">
         <div class="header-overlay">
             <div class="header-title">Weight Management Strategies</div>
+			<a href="healthcategories.html" class="back-button">Back</a>
         </div>
     </div>
 <br>
@@ -207,22 +218,19 @@
                     <li>Dancing</li>
                 </ul>
 				
-				
-        <!-- Textbox to input list items -->
         <input type="text" id="new-item" class="input-box" placeholder="Add new activity...">
         <button class="add-button" onclick="addItem()">Add Item</button>
     
 
     <script>
-        // Function to add a new item to the list
         function addItem() {
-            var newItem = document.getElementById('new-item').value; // Get the value from the input box
-            if (newItem.trim() !== '') { // Check if the input is not empty
+            var newItem = document.getElementById('new-item').value; 
+            if (newItem.trim() !== '') { 
                 var ul = document.getElementById('exercise-list');
                 var li = document.createElement('li');
-                li.textContent = newItem; // Set the list item text
-                ul.appendChild(li); // Add the new list item to the ul
-                document.getElementById('new-item').value = ''; // Clear the input box
+                li.textContent = newItem; 
+                ul.appendChild(li); 
+                document.getElementById('new-item').value = ''; 
             }
         }
     </script>
@@ -271,7 +279,7 @@
 			
 			<br>
         
-    <!-- Video Section (Can be placed above or below the events) -->
+
 <div class="video-section">
   <h3>Check out this video to learn some amazing yoga techniques !</h3>
   <div class="video-container">
