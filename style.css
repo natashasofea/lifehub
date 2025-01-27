@@ -909,13 +909,13 @@ button {
   }
 
   .footer-links li a {
-    color: #173f17;
+    color: #214221;
     text-decoration: none;
     transition: color 0.3s;
   }
 
   .footer-links li a:hover {
-    color: #4d410f;
+    color: #b59f4a;
   }
 
   .social-icons {
@@ -940,4 +940,3 @@ button {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     padding-top: 10px;
   }
-
