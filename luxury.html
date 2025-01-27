@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover luxury resorts in Malaysia, including the best destinations, experiences, and tips for a premium getaway.">
+    <title>Luxury Resorts in Malaysia - WikiTheme</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f5f0; /* Soft beige for luxury vibes */
+            color: #2d4739; /* Dark green for sophistication */
+        }
+        header {
+            background: linear-gradient(to right, #d4af37, #556b2f); /* Gold to deep green */
+            border-bottom: 1px solid #ccc;
+            padding: 20px 10%;
+            position: relative;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #fff; /* White for clarity */
+        }
+        header p {
+            font-size: 1.2em;
+            color: #f9f5f0; /* Soft beige for contrast */
+        }
+        .button-container {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+        .button-container button {
+            background-color: #556b2f; /* Deep green */
+            color: #d4af37; /* Elegant gold */
+            border: 2px solid #d4af37;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .button-container button:hover {
+            background-color: #d4af37; /* Elegant gold */
+            color: #556b2f; /* Deep green */
+        }
+        main {
+            padding: 20px 10%;
+        }
+        h2 {
+            border-bottom: 2px solid #d4af37; /* Gold accent */
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        p {
+            margin: 10px 0;
+        }
+        ul {
+            margin: 10px 0 20px 20px;
+        }
+        a {
+            color: #556b2f; /* Deep green */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background: linear-gradient(to right, #556b2f, #d4af37); /* Deep green to gold */
+            border-top: 1px solid #ccc;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
+            color: #f9f5f0; /* Soft beige */
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+            opacity: 0;
+            animation: fadeInZoom 2s forwards; /* Fade in and zoom animation */
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        @keyframes fadeInZoom {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+
+        /* Chatbox Styles */
+        .chatbox-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 350px;
+            background-color: #fff;
+            border: 2px solid #2c3e50;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            max-height: 400px;
+            z-index: 1000;
+        }
+        .chatbox-header {
+            background-color: #76c893;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .chatbox-messages {
+            flex-grow: 1;
+            padding: 10px;
+            overflow-y: auto;
+            height: 250px;
+            border-bottom: 2px solid #2c3e50;
+        }
+        .chatbox-input {
+            display: flex;
+            border-top: 2px solid #2c3e50;
+        }
+        .chatbox-input input {
+            width: 80%;
+            padding: 10px;
+            border: none;
+            border-radius: 0 0 0 10px;
+            outline: none;
+            font-size: 1em;
+        }
+        .chatbox-input button {
+            width: 20%;
+            padding: 10px;
+            background-color: #8d6e63;
+            border: none;
+            border-radius: 0 0 10px 0;
+            cursor: pointer;
+        }
+        .chatbox-input button:hover {
+            background-color: #1e5631;
+            color: white;
+        }
+
+        /* Chat Icon */
+        .chatbox-icon {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: #8d6e63;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .chatbox-icon:hover {
+            background-color: #76c893;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="button-container">
+            <button onclick="window.history.back();">&#8592; Go Back</button>
+        </div>
+        <h1>Luxury Resorts in Malaysia</h1>
+        <p>Discover the best destinations and experiences for an unforgettable luxury getaway.</p>
+    </header>
+    <main>
+        <h2>What is a Luxury Resort?</h2>
+        <div class="image-container">
+            <img src="luxury1.jpg" alt="Beautiful luxury resort in Malaysia">
+        </div>
+        <p><strong>Luxury resorts</strong> offer unparalleled comfort, exceptional amenities, and breathtaking locations. Malaysia is home to world-class resorts that promise a serene and lavish escape.</p>
+        <ul>
+            <li><strong>Top Destinations:</strong> Langkawi, Sabah, Penang, and Pahang.</li>
+            <li><strong>Facilities:</strong> Private villas, infinity pools, fine dining, and spa services.</li>
+            <li><strong>Experiences:</strong> Beachfront relaxation, jungle retreats, and premium hospitality.</li>
+        </ul>
+
+        <h2>Why Choose a Luxury Resort in Malaysia?</h2>
+        <p>Malaysia's luxury resorts offer an idyllic blend of natural beauty and world-class services:</p>
+        <ul>
+            <li>Exclusive access to pristine beaches and lush rainforests.</li>
+            <li>Personalized services for a stress-free vacation.</li>
+            <li>Indulgent amenities, from infinity pools to award-winning spas.</li>
+        </ul>
+
+        <h2>Explore More</h2>
+        <p>Plan your perfect luxury escape with these resources:</p>
+        <ul>
+            <li><a href="https://www.tripadvisor.com.my/HotelsList-Malaysia-Luxury-Resorts-zfp1234.html">Top Luxury Resorts in Malaysia</a></li>
+            <li><a href="https://www.luxurytravelmagazine.com/destinations/asia/malaysia">Luxury Travel Magazine: Malaysia</a></li>
+            <li><a href="https://www.travelandleisure.com/asia/malaysia-luxury-hotels">Malaysia's Best Luxury Hotels</a></li>
+            <li><a href="https://www.kayak.com.my/Malaysia-Hotels.150.dc.html">Plan Your Luxury Stay</a></li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2025 Luxury Resorts WikiTheme. All rights reserved.</p>
+    </footer>
+
+    <!-- Chatbox -->
+    <div class="chatbox-container" id="chatbox">
+        <div class="chatbox-header">Chat with Us</div>
+        <div class="chatbox-messages" id="messages"></div>
+        <div class="chatbox-input">
+            <input type="text" id="chat-input" placeholder="Type a message..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <!-- Chat Icon -->
+    <button class="chatbox-icon" id="chat-icon" onclick="toggleChatbox()">💬</button>
+
+    <script>
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        const chatIcon = document.getElementById("chat-icon");
+
+        // Function to toggle the chatbox visibility
+        function toggleChatbox() {
+            var chatbox = document.getElementById("chatbox");
+            if (chatbox.style.display === "none" || chatbox.style.display === "") {
+                chatbox.style.display = "flex";
+            } else {
+                chatbox.style.display = "none";
+            }
+        }
+
+        // Function to send a message
+        function sendMessage() {
+            var message = document.getElementById("chat-input").value;
+            if (message.trim() != "") {
+                var messageDiv = document.createElement("div");
+                messageDiv.textContent = message;
+                document.getElementById("messages").appendChild(messageDiv);
+                document.getElementById("chat-input").value = "";
+            }
+        }
+
+        // Make the icon draggable
+        chatIcon.addEventListener("mousedown", function(e) {
+            isDragging = true;
+            offsetX = e.clientX - chatIcon.getBoundingClientRect().left;
+            offsetY = e.clientY - chatIcon.getBoundingClientRect().top;
+            document.addEventListener("mousemove", moveIcon);
+            document.addEventListener("mouseup", stopDragging);
+        });
+
+        function moveIcon(e) {
+            if (isDragging) {
+                chatIcon.style.left = `${e.clientX - offsetX}px`;
+                chatIcon.style.top = `${e.clientY - offsetY}px`;
+            }
+        }
+
+        function stopDragging() {
+            isDragging = false;
+            document.removeEventListener("mousemove", moveIcon);
+            document.removeEventListener("mouseup", stopDragging);
+        }
+    </script>
+</body>
+</html>

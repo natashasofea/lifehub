@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('login.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        .guestbook-container {
+            background: Gainsboro;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .guestbook-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #5A5A5A;
+            animation: fadeInZoom 2s ease-in-out infinite;
+        }
+
+        @keyframes fadeInZoom {
+            0%, 100% {
+                opacity: 0.8;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+        }
+
+        .guestbook-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .guestbook-container input, .guestbook-container textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            width: 100%;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .guestbook-container input:focus, .guestbook-container textarea:focus {
+            outline: none;
+            border-color: #9c9c9c;
+        }
+
+        .guestbook-container button {
+            background: linear-gradient(135deg, #6c757d, #adb5bd);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s;
+        }
+
+        .guestbook-container button:hover {
+            background: linear-gradient(135deg, #adb5bd, #6c757d);
+            transform: scale(1.05);
+        }
+
+        .messages {
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .message h3 {
+            margin: 0 0 5px;
+            font-size: 18px;
+            color: #495057;
+        }
+
+        .message p {
+            margin: 0;
+            font-size: 14px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="guestbook-container">
+        <h1>Guestbook</h1>
+        <form id="guestbook-form">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="messages" id="messages">
+            <!-- Messages will appear here -->
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('guestbook-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+            const messagesContainer = document.getElementById('messages');
+
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message');
+            messageDiv.innerHTML = `<h3>${name}</h3><p>${message}</p>`;
+
+            messagesContainer.prepend(messageDiv);
+
+            this.reset();
+        });
+    </script>
+</body>
+</html>

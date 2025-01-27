@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<title>Health and Wellness</title>
+<style>
+ body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: white;
+            color: #333;
+        }
+
+	
+        .header {
+            width: 100%;
+            height: 150px;
+            background-color: #2e7d32;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .header-title {
+            text-align: center;
+            font-size: 50px;
+            color: white;
+            line-height: 150px;
+            font-weight: bold;
+            font-family: Palatino, serif;
+        }
+		
+
+    .intro {
+      flex: 1; 
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: justify;
+      height: 200px;
+      background-image: url(background1.png);
+	  background-size: cover;
+      padding: 40px;
+	  gap: 20px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    }
+	
+	  .intro .box {
+      flex: 1;
+      max-width: 500px;
+      padding: 5px;
+
+    }
+
+
+    .intro p {
+      font-size: 16px;
+	  margin-top: 10px;
+	  line-height: 1.6;
+      color: black;
+	  margin: 0;
+    }
+	
+  /* Topic Section */
+    .topic {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      gap: 20px;
+      background-color: #eaf4ea;
+    }
+
+    .topic div {
+      flex: 1;
+      text-align: justify;
+      padding: 0 10px;
+    }
+
+    .topic div:not(:last-child) {
+      border-right: 1px solid #ccc;
+    }
+
+    .topic h3 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #2e7d32;
+	  text-align: center;
+    }
+
+    .topic p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+    }
+		
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      background-color: #eaf4ea;
+	
+    }
+
+    .category-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+	  background-color: white;
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+.category-card img {
+    max-width: 100%; 
+    height: auto; 
+    margin-bottom: 10px;
+}
+
+
+    .category-card h4 {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .category-card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+	  line-height: 1.3;
+    }
+
+    .category-card button {
+      padding: 10px 20px;
+      font-size: 14px;
+      color: white;
+      background-color: #005f56;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .category-card button:hover {
+      background-color: #007f70;
+    }
+	
+    .bmi {
+      flex: 1; 
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: left;
+      height: 200px;
+      background-image: url(background2.png);
+	  background-size: cover;
+      padding: 40px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+	 
+
+    }
+
+    .bmi p {
+      font-size: 30px;
+      margin-bottom: 20px;
+	  margin-top: 10px;
+	  line-height: 1.6;
+      color: white;
+	  padding: 5px 10px;
+	  font-family: Palatino, serif; 
+    }
+
+    .bmi button {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #005f56;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .bmi button:hover {
+      background-color: #007f70;
+      transform: scale(1.05);
+    }
+		
+</style>
+<body>
+
+
+<div class="header">
+    <div class="header-overlay">
+        <div class="header-title">Health and Wellness </div>
+    </div>
+</div>
+
+<section class="intro">
+    <div class="box">
+     <p><b>Health and wellness</b> refer to a holistic state of physical, mental, emotional, and social well-being, extending beyond the mere absence of illness. It involves maintaining balance in lifestyle choices, including proper nutrition, regular exercise, mental resilience, and fostering positive relationships. Embracing health and wellness promotes vitality, reduces stress, and enhances the quality of life, enabling individuals to thrive in all aspects of their lives.
+	</div>
+    </section>
+	
+<section class="topic">
+     <div>
+        <h3>Physical Wellness</h3>
+        <p>Physical wellness involves maintaining a healthy body through regular exercise, proper nutrition, adequate sleep, and preventative care.It's about taking proactive steps to ensure that your body functions at its best, helping you to stay active and energetic.</p>
+    </div>
+    <div>
+        <h3>Mental Wellness</h3>
+        <p>Mental wellness focuses on emotional balance, stress management, and fostering a positive mindset. It emphasizes techniques for building resilience and coping effectively with life’s challenges for a more balanced and happier mind.</p>
+    </div>
+    <div>
+        <h3>Social Wellness</h3>
+        <p>Social wellness emphasizes building and nurturing healthy relationships, fostering meaningful connections, and creating a strong support system. It plays a crucial role in enhancing your emotional well-being and overall quality of life.</p>
+    </div>
+</section>
+
+<section class="categories">
+    <div class="category-card">
+        <img src="activity.jpg" alt="Weight Management Strategies">
+        <h4>Weight Management Strategies</h4>
+        <p>Explore effective strategies and tips for managing your weight in a healthy, sustainable way.</p>
+        <button><a href="weightmanagement.html" style="color: white; text-decoration: none;" target="_blank">Learn More</a></button>
+    </div>
+    <div class="category-card">
+        <img src="selfcareroutine1.jpg" alt="Self-Care Routines">
+        <h4>Self-Care <br> Routines</h4>
+        <p>Develop a personalized self-care routine to improve mental clarity, reduce stress, and enhance your overall wellness.</p>
+        <button><a href="selfcare.html" style="color: white; text-decoration: none;" target="_blank">Learn More</a></button>
+    </div>
+    <div class="category-card">
+        <img src="mealplan1.jpg" alt="Diet Plan">
+        <h4>Diet Plan <br> for Lose Weight</h4>
+		<p>Start your journey towards better health with a tailored diet plan designed to help you lose weight in a healthy manner.</p>
+		<button><a href="dietplan.html" style="color: white; text-decoration: none;" target="_blank">Learn More</a></button>
+	</div>
+	
+	  <div class="category-card">
+        <img src="timemgt.jpg" alt="Time Management">
+        <h4>Lifestyle <br> and Habits</h4>
+		<p>Effective time management strategies are key to achieving balance in all aspects of your life.</p>
+		<button><a href="timemanagement.html" style="color: white; text-decoration: none;" target="_blank">Learn More</a></button>
+	</div>
+</section>
+
+
+<section class="bmi">
+     <p>STILL UNSURE ABOUT YOUR WEIGHT ? <br>CALCULATE IT NOW AND TAKE THE FIRST <br> STEP TOWARDS A HEALTHIER YOU ! </p>
+	   
+      <button><a href="https://www.calculator.net/bmi-calculator.html" target="_blank" style="color: white; text-decoration: none;">Check It Now</a></button>
+    </section>
+	
+
+
+
+</body>
+</html>
+

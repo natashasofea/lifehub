@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel and Leisure Wiki</title>
+  <style>
+    /* Existing styles */
+   body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #eaf4ea;
+  color: #333;
+}
+ 
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+     .header {
+            width: 100%;
+            height: 150px;
+            background-color: #2e7d32;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .header-title {
+            text-align: center;
+            font-size: 50px;
+            color: white;
+            line-height: 150px;
+            font-weight: bold;
+            font-family: Palatino, serif;
+        }
+
+    .content {
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .content .section {
+      margin-bottom: 30px;
+    }
+
+    .content .section h2 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #4B9F9F;
+    }
+    
+    .content h2 {
+     color: #2e7d32; 
+    }
+
+    /* For Best Sunset View Places */
+.content h2:first-of-type {
+  color: #2e7d32;
+}
+
+/* For Upcoming Events */
+.content .events-section h2 {
+  color: #2e7d32;
+}
+
+/* For Explore More With Our Videos */
+.video-section h2 {
+  color: #2e7d32;
+}
+
+    
+
+    .marquee-banner {
+      background-color: #2e7d32;
+      color: #eaf4ea;
+      font-size: 30px;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 15px 0;
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .marquee-banner marquee {
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .marquee-text {
+      font-size: 35px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .marquee-text:hover {
+      color: #FFD700; /* Change color on hover */
+    }
+
+    /* Slider Styles */
+    .slider-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.3s ease;
+    }
+
+    .slide {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .slider-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .slider-buttons button {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .slider-buttons button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+.travel-definition {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f0f8f0;
+  border-left: 5px solid #2e7d32;
+  border-radius: 5px;
+}
+
+.travel-definition h2 {
+  color: #2e7d32;
+  font-size: 22px;
+}
+
+.travel-definition p {
+  font-size: 16px;
+  color: #333;
+}
+
+
+
+    .card-container {
+  display: flex;
+  justify-content: space-evenly; /* Evenly distribute the cards */
+  gap: 20px; /* Maintain space between cards */
+  flex-wrap: wrap; /* Ensure responsiveness on smaller screens */
+}
+
+.card {
+  width: calc(30% - 10px); /* Adjust width to fit evenly across rows */
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+  text-align: center; /* Center align the content */
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card .info {
+  padding: 15px;
+}
+
+.card .info h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #2e7d32;
+}
+
+.card .info p {
+  font-size: 14px;
+  color: #666;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(45% - 10px); /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* Full width for narrow screens */
+  }
+}
+
+
+    .submit-btn {
+      background: #4B9F9F;
+      color: #fff;
+      font-size: 16px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .submit-btn:hover {
+      background: #3E8E8E;
+    }
+
+    .button-group {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .button-group button {
+      padding: 10px 25px;
+      background-color: #4B9F9F;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .button-group button:hover {
+      background-color: #3E8E8E;
+    }
+
+    /* Style for 3D video and photo sections */
+    .three-d-section {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    #3d-video {
+      margin-top: 20px;
+      width: 100%;
+      height: 300px;
+    }
+
+    #3d-photo {
+      margin-top: 20px;
+      position: relative;
+      width: 100%;
+      height: 300px;
+      background: url('3d-photo.jpg') no-repeat center center;
+      background-size: cover;
+      transition: transform 0.3s ease;
+    }
+
+    #3d-photo:hover {
+      transform: scale(1.1);
+    }
+
+    /* Style for Upcoming Events */
+    .events-section {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #f7fcf7;
+      border-radius: 10px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .events-section h2 {
+      font-size: 20px;
+      color: #4B9F9F;
+      margin-bottom: 15px;
+    }
+
+    .events-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .event-card {
+      width: calc(33.33% - 20px);
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .event-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .event-card .event-info {
+      padding: 15px;
+    }
+
+    .event-card .event-date {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    .event-card .event-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .event-card .event-description {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .event-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Video Section Styles */
+    .video-section {
+      margin-top: 40px;
+      text-align: center;
+      padding: 20px;
+      background-color: #f7fcf7;
+      border-radius: 10px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-section h2 {
+      font-size: 20px;
+      color: #4B9F9F;
+      margin-bottom: 15px;
+    }
+
+    .video-container iframe {
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        width: calc(50% - 20px);
+      }
+
+      .slider-container {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        width: 100%;
+      }
+
+      .sidebar {
+        width: 100%;
+      }
+
+      .main {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+ 
+  <div class="header">
+        <div class="header-overlay">
+            <div class="header-title">Travel and Leisure</div>
+        </div>
+    </div>
+<br>
+
+
+    <div class="content">
+      <!-- Marquee Banner Section -->
+      <div class="marquee-banner">
+        <marquee behavior="scroll" direction="left" scrollamount="10">
+          <span class="marquee-text">🚨 Book Your Airplane Tickets Now for Amazing Travel Deals! ✈️ Don't Miss Out on Limited-Time Offers!</span>
+        </marquee>
+      </div>
+
+      <!-- Slider Section -->
+      <div class="slider-container">
+        <div class="slider">
+          <img class="slide" src="travel1.jpg" alt="Slider Image 1">
+          <img class="slide" src="travel2.jpg" alt="Slider Image 2">
+          <img class="slide" src="travel3.jpg" alt="Slider Image 3">
+          <img class="slide" src="travel4.jpg" alt="Slider Image 4">
+          <img class="slide" src="travel5.jpg" alt="Slider Image 5">
+          <img class="slide" src="travel6.jpg" alt="Slider Image 6">
+          <img class="slide" src="travel7.jpg" alt="Slider Image 7">
+          <img class="slide" src="travel8.jpg" alt="Slider Image 8">
+          <img class="slide" src="travel9.jpg" alt="Slider Image 9">
+          <img class="slide" src="travel10.jpg" alt="Slider Image 10">
+        </div>
+        <div class="slider-buttons">
+          <button onclick="prevSlide()">Prev</button>
+          <button onclick="nextSlide()">Next</button>
+        </div>
+      </div>
+
+<div class="content">
+  <!-- Maksud Travel (Wiki Style) -->
+  <div class="travel-definition">
+    <h2>What is Travel?</h2>
+    <p>
+      Travel refers to the act of moving from one place to another, typically over a significant distance, for leisure, business, or other purposes. It allows individuals to explore new cultures, landscapes, and experiences, often broadening perspectives and creating unforgettable memories.
+    </p>
+  </div>
+      
+      
+     <!-- Best Place to Travel Section -->
+<h2>Best Place to Travel</h2>
+<div class="card-container">
+  <div class="card">
+    <a href="beach.html">
+      <img src="beach1.jpg" alt="Beach">
+      <div class="info">
+        <h3>Beach Vacations</h3>
+        <p>A beach vacation offers ultimate relaxation with sun, sea, and tranquility.</p>
+      </div>
+    </a>
+  </div>
+  <div class="card">
+    <a href="mountain.html">
+      <img src="mountain1.jpg" alt="Mountain">
+      <div class="info">
+        <h3>Mountain Adventures</h3>
+        <p>Mountain adventures promise thrilling experiences amidst breathtaking peaks and nature.</p>
+      </div>
+    </a>
+  </div>
+  <div class="card">
+    <a href="city.html">
+      <img src="city1.jpg" alt="City">
+      <div class="info">
+        <h3>City Explorations</h3>
+        <p>City exploration offers vibrant culture, iconic landmarks, and endless discoveries.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+      <!-- Upcoming Events Section -->
+<div class="events-section">
+  <h2>Upcoming Events</h2>
+  <ul class="events-list">
+    <li class="event-card">
+      <a href="https://www.travelperk.com/blog/best-global-travel-conferences-to-attend/" target="_blank">
+        <img src="event1.jpg" alt="Travel Conference 2025">
+        <div class="event-info">
+          <div class="event-date">Jan 30, 2025</div>
+          <div class="event-title">Travel Conference 2025</div>
+          <div class="event-description">Join industry experts to discuss the future of travel.</div>
+        </div>
+      </a>
+    </li>
+    <li class="event-card">
+      <a href="https://www.luxurytravelfair.com/2025-exhibitor-enquiry" target="_blank">
+        <img src="event2.jpg" alt="Luxury Travel Fair">
+        <div class="event-info">
+          <div class="event-date">Feb 15, 2025</div>
+          <div class="event-title">Luxury Travel Fair</div>
+          <div class="event-description">Explore exclusive luxury travel destinations.</div>
+        </div>
+      </a>
+    </li>
+    <li class="event-card">
+      <a href="https://www.outdoorexpo.my/" target="_blank">
+        <img src="event3.jpeg" alt="Adventure Sports Expo">
+        <div class="event-info">
+          <div class="event-date">Mar 20, 2025</div>
+          <div class="event-title">Adventure Sports Expo</div>
+          <div class="event-description">Get inspired for your next adventure with exciting talks and showcases.</div>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+    <!-- Video Section (Can be placed above or below the events) -->
+<div class="video-section">
+  <h2>Explore More With Our Videos</h2>
+  <div class="video-container">
+    <iframe width="100%" height="400px" src="https://www.youtube.com/embed/HCjrsAfIzhk" title="Travel Video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+
+    
+  <script>
+   let currentSlide = 0;
+
+function nextSlide() {
+  const slides = document.querySelectorAll('.slide');
+  currentSlide = (currentSlide + 1) % slides.length;
+  updateSlider();
+}
+
+function prevSlide() {
+  const slides = document.querySelectorAll('.slide');
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  updateSlider();
+}
+
+function updateSlider() {
+  const slider = document.querySelector('.slider');
+  const offset = -currentSlide * 100;
+  slider.style.transform = `translateX(${offset}%)`;
+}
+
+  </script>
+</body>
+</html>

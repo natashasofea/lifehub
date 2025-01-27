@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notion-Style Wiki</title>
+</head>
+<body>
+  
+  <div id="notificationModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeNotification()">&times;</span>
+      <h2>Welcome to Lifehub!</h2>
+      <p>Discover a healthy lifestyle with us</p>
+      <button onclick="closeNotification()">Got it!</button>
+    </div>
+  </div>
+
+
+     <!-- Global Header -->
+  <header class="global-header">
+    <div class="global-header-left">
+      <button class="toggle-btn" onclick="toggleNavigationPanel()">☰</button>
+      <a href="index.html">
+      <img src="logo.png" alt="Logo" class="logo">
+      </a>
+    </div>
+    <h1>Wiki</h1>
+
+  <div class="search-container">
+    <form action="/search" method="get">
+      <input type="text" name="query" placeholder="Search..." class="search-input">
+      <button type="submit" class="search-btn">🔍</button>
+    </form>
+  </div>
+</header>
+
+  <button onclick="toggleNavigationPanel()">Toggle Navigation</button>
+  <div class="navigation-panel hidden" id="navigation-panel">
+    <h3>Our Company</h3>
+    <ul>
+      <li><a href="aboutus.html">About Us</a></li>
+    </ul>
+
+    <h3>Categories of Lifestyle</h3>
+    <ul>
+      <li><a href="healthcategories.html">Health and Wellness</a></li>
+      <li><a href="living.html">Sustainable Living</a></li>
+      <li><a href="categoriesfood.html">Food and Recipes</a></li>
+      <li><a href="travel.html">Travel and Leisure</a></li>
+      <li>
+
+    <h3>Contact</h3>
+    <ul>
+      <li><a href="contactus.html">Contact Us</a></li>
+      <li><a href="form.html">Register</a></li>
+      <li><a href="guestbook.html">Visit our Guestbook</a></li>
+    </ul>
+  </div>
+
+  <!-- Promotional Banner / Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2 class="hero-title">LifeHub</h2>
+      <p class="hero-description">Discover everything you need to know about our company and lifestyle categories. Get started by exploring our mission and vision!</p>
+      <button onclick="location.href='#image-grid-section'">Explore now!</button>
+    </div>
+  </section>
+
+  <!-- Creative Section -->
+<section class="creative-section">
+  <div class="creative-content">
+    <div class="image-container">
+      <img src="logo.png" alt="Creative Image" class="creative-image">
+      <div class="image-overlay">
+        <p class="overlay-text">Empowering Your Life, One Hub at a Time</p>
+      </div>
+    </div>
+    <div class="text-container">
+      <h2 class="creative-heading">Embrace a Healthier Lifestyle</h2>
+      <p class="creative-text">Join us as we explore wellness, sustainable living, and much more. We provide practical tips and advice to help you live your best life every day.</p>
+    </div>
+  </div>
+</section>
+
+<section class="image-grid-section" id="image-grid-section">
+  <h2>Explore More</h2>
+  <div class="image-grid">
+    <div class="image-item">
+      <a href="healthcategories.html">
+        <h3>Health and Wellness</h3>
+        <img src="health.jpeg" alt="Image 1">
+      </a>
+    </div>
+    <div class="image-item">
+      <a href="living.html">
+        <h3>Sustainable Living</h3>
+        <img src="pokok.jpg" alt="Image 2">
+      </a>
+    </div>
+    <div class="image-item">
+      <a href="travel.html">
+        <h3>Travel and Leisure</h3>
+        <img src="travelpic.jpg" alt="Image 3">
+      </a>
+    </div>
+    <div class="image-item">
+      <a href="categoriesfood.html">
+        <h3>Food and Recipe</h3>
+        <img src="food.jpeg" alt="Image 4">
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Responsive Table Section -->
+<section class="table-section">
+  <h2>Lifehub Content</h2>
+  <p> A quick guide to essential practices for better health, happiness, and well-being.</p>
+  <table class="responsive-table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Image</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-row">
+        <td>Healthy Snacks</td>
+        <td><img src="summer.jpg" alt="Summer Recipes" class="table-image" onclick="openLightbox(this)"></td>
+        <td>Quick and nutritious snack ideas for a busy lifestyle..</td>
+      </tr>
+      <tr class="table-row">
+        <td>Travel destinations</td>
+        <td><img src="packing.jpg" alt="Packing Tips" class="table-image" onclick="openLightbox(this)"></td>
+        <td>Highlight unique and sustainable travel locations.</td>
+      </tr>
+      <!-- Add more rows as needed -->
+    </tbody>
+  </table>
+</section>
+
+
+
+<!-- Lightbox Modal -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-content">
+    <span class="close-btn" onclick="closeLightbox()">×</span>
+    <img id="lightbox-image" src="" alt="Lightbox Image">
+  </div>
+</div>
+
+
+
+  <!-- Featured Section with Green Background -->
+<section class="featured-section">
+  <h2 class="section-title">Featured Articles</h2>
+  <div class="featured-grid">
+    <!-- Article 1 -->
+    <div class="featured-item">
+      <img src="delicious.jpg" alt="Top 10 Summer Recipes" class="thumbnail">
+      <div class="featured-info">
+        <h3>Top 10 Summer Recipes for Refreshing Meals</h3>
+        <p>Beat the heat with these easy and refreshing recipes to keep you cool this summer.</p>
+        <a href="https://www.howsweeteats.com/2024/07/summer-weeknight-meals/" class="read-more-btn">Read More</a>
+      </div>
+    </div>
+    <!-- Article 2 -->
+    <div class="featured-item">
+      <img src="adventure.jpg" alt="Pack Light for Adventure" class="thumbnail">
+      <div class="featured-info">
+        <h3>How to Pack Light for Your Next Adventure</h3>
+        <p>Master the art of packing efficiently and travel stress-free on your next trip.</p>
+        <a href="https://www.indietraveller.co/how-to-pack-light/" class="read-more-btn">Read More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="poll-section">
+  <h2>We Want Your Opinion!</h2>
+  <p>Help us improve by answering this quick poll.</p>
+  <form class="poll-form">
+    <div class="poll-option">
+
+      <label for="option1">What type of content do you enjoy the most?</label>
+      <select name="content-type" id="content-type">
+        <option value="health">Health & Wellness</option>
+        <option value="travel">Travel & Leisure</option>
+        <option value="recipes">Recipes</option>
+        <option value="fitness">Fitness</option>
+      </select>
+    </div>
+
+    <div class="poll-option">
+      <label for="option2">What lifestyle change are you aiming for?</label>
+      <input type="text" name="lifestyle-change" placeholder="e.g., better sleep, fitness goals">
+    </div>
+
+    <button type="submit">Submit Poll</button>
+  </form>
+</section>
+
+<button id="scrollToTopBtn">⬆ </button>
+
+<footer class="global-footer">
+  <div class="footer-container">
+    <!-- Section 1: About -->
+    <div class="footer-section">
+      <h4>About Us</h4>
+      <p>
+        We are committed to providing the best experience for our users. Stay connected and explore our content.
+      </p>
+    </div>
+
+    <!-- Section 2: Quick Links -->
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="#index.html">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 3: Social Media -->
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><img src="fb.png" alt="Facebook" /></a>
+        <a href="#" aria-label="Twitter"><img src="twt.png" alt="Twitter" /></a>
+        <a href="#" aria-label="Instagram"><img src="ig.png" alt="Instagram" /></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <p>&copy; LifeHub. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+<script>
+
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  // Show the button when the user scrolls down 100px from the top
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      scrollToTopBtn.style.display = 'block';
+    } else {
+      scrollToTopBtn.style.display = 'none';
+    }
+  });
+
+  // Smooth scroll back to the top when the button is clicked
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  function toggleNavigationPanel() {
+  const panel = document.getElementById('navigation-panel');
+  // Toggle the `hidden` and `visible` classes
+  if (panel.classList.contains('hidden')) {
+    panel.classList.remove('hidden');
+    panel.classList.add('visible');
+  } else {
+    panel.classList.remove('visible');
+    panel.classList.add('hidden');
+  }
+}
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('img.fade-in');
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('loaded');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    images.forEach(image => {
+      observer.observe(image);
+    });
+  });
+
+  // Fade-in effect when scrolling to the table
+window.addEventListener('scroll', function() {
+  const rows = document.querySelectorAll('.table-row');
+  rows.forEach((row, index) => {
+    const rect = row.getBoundingClientRect();
+    if (rect.top <= window.innerHeight - 50) {
+      setTimeout(() => {
+        row.classList.add('visible');
+      }, index * 200); // Delay each row's fade-in
+    }
+  });
+});
+
+// Lightbox functionality
+function openLightbox(img) {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = document.getElementById('lightbox-image');
+  lightboxImage.src = img.src; // Set the image source to the clicked image
+  lightbox.style.display = 'flex'; // Show the lightbox
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  lightbox.style.display = 'none'; // Hide the lightbox
+}
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Set up the Intersection Observer to detect when the section or items come into view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Add 'visible' class when the section/item is in view
+            entry.target.classList.add("visible");
+          } else {
+            // Remove 'visible' class when the section/item is out of view
+            entry.target.classList.remove("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.2, // Trigger the animation when 20% of the element is in the viewport
+      }
+    );
+
+    // Observe the main section
+    const imageGridSection = document.querySelector(".image-grid-section");
+    observer.observe(imageGridSection);
+
+    // Observe each image item
+    const imageItems = document.querySelectorAll(".image-item");
+    imageItems.forEach((item) => {
+      observer.observe(item);
+    });
+  });
+
+  // Function to show the modal
+  function showNotification() {
+    const modal = document.getElementById("notificationModal");
+    modal.style.display = "block";
+  }
+
+  // Function to close the modal
+  function closeNotification() {
+    const modal = document.getElementById("notificationModal");
+    modal.style.display = "none";
+  }
+
+  // Optional: Automatically show the modal after a delay when the page loads
+  window.onload = function () {
+    setTimeout(showNotification, 1000); // Show modal 1 second after the page loads
+  };
+
+  // Optional: Close the modal when clicking outside the modal content
+  window.onclick = function (event) {
+    const modal = document.getElementById("notificationModal");
+    if (event.target === modal) {
+      closeNotification();
+    }
+  };
+</script>
+</body>
+</html>
