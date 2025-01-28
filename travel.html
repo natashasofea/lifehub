@@ -685,11 +685,12 @@ body {
       updateSlider();
     }
 
-    function updateSlider() {
-      const slider = document.querySelector('.slider');
-      const offset = -currentSlide * 100;
-      slider.style.transform = translateX(${offset}%);
-    }
+   function updateSlider() {
+  const slider = document.querySelector('.slider');
+  const offset = -currentSlide * 100;
+  slider.style.transform = `translateX(${offset}%)`;
+}
+
   </script>
 </body>
 </html>
