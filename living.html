@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainable Living - Lifehub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('rumah.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    
+    header {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      width: 100%;
+    }
+
+
+
+    header h1 {
+      margin: 0;
+      font-size: 50px;
+      line-height: 110px;
+      font-family: Palatino, serif;
+
+    }
+
+.back-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+			position: absolute;
+			top: 20px;
+			left: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #45a049;
+        }
+		
+
+   
+    .main {
+      max-width: 800px;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      background: whitesmoke;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+   
+    img.fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+      width: 60%;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    img.fade-in.loaded {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    img.fade-in:hover {
+      opacity: 0.7;
+      transform: scale(1.05);
+    }
+
+   
+   .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    width: 90%; /* Responsif */
+    margin: 20px auto 50px auto; /* Tambahkan margin bawah */
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+  }
+
+  .image-container {
+    flex: 1;
+    max-width: 400px;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-container {
+    flex: 2;
+    padding-left: 20px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  
+.global-footer {
+  background-color: #f0ebd0;
+  background-size: cover;
+  color: #2e7d32;
+  padding: 20px 15px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box; 
+  position: relative;  
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1200px; 
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer-section p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 8px 0;
+}
+
+.footer-links li a {
+  color: #173f17;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+  color: #4d410f;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  text-align: center; 
+  margin-top: 20px;
+  font-size: 12px; 
+  padding-top: 10px; 
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+
+footer .footer-bottom p {
+  margin: 0; 
+  text-align: center;
+   color: #173f17;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex-grow: 1; 
+}
+
+
+
+    @media (max-width: 480px) {
+      .card {
+        width: 100%;
+      }
+
+      .sidebar {
+        width: 100%;
+      }
+
+      .main {
+        width: 100%;
+      }
+			
+		
+
+
+
+ </style>
+</head>
+<body>
+  <header>
+    <h1>Sustainable Living</h1>
+   <a href="lifehub.html" class="back-button">Back</a>
+  </header>
+
+ 
+
+  <div class="container">
+    <!-- Left side: SDG Image -->
+    <div class="image-container">
+      <img src="sdg.png" alt="SDG Image">
+    </div>
+
+    <!-- Right side: Text -->
+    <div class="text-container">
+      <h2>Sustainable Development Goal 1: No Poverty</h2>
+      <p>SDG 1 aims to end poverty in all its forms everywhere. Poverty eradication is essential for sustainable development, as poverty is a major barrier to achieving other goals, such as quality education and gender equality.</p>
+
+      <div class="justify-text">
+        <p>While significant progress has been made in reducing poverty rates globally, millions of people still live in extreme poverty. This goal emphasizes the need for ensuring equal access to resources, economic opportunities, and social protections for the most vulnerable populations.</p>
+        <p>Implementing SDG 1 requires collaboration between governments, businesses, and local communities to reduce inequalities and ensure sustainable growth that benefits everyone, especially those at the bottom of the socio-economic ladder.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main" id="main">
+    <h2>Introduction to Sustainable Living</h2>
+    <p>Sustainable living refers to making choices that reduce an individual’s or community’s impact on the environment. The goal is to meet the needs of the present without compromising the ability of future generations to meet their own needs. Sustainable living involves adopting practices that conserve resources, protect ecosystems, and promote social equity.
+
+      The importance of sustainability extends beyond environmental concerns. It also encompasses social, economic, and cultural aspects that shape our daily lives. From the food we eat, the energy we consume, to the waste we generate, sustainable living invites us to reflect on the long-term effects of our actions and the global consequences they may have.</p>
+    <a href="https://www.inspirecleanenergy.com/blog/sustainable-living/what-is-sustainable-living"><img src="sustainaa.png" alt="Sustainable Living Image" class="fade-in"></a>
+
+    <h2>Importance of Sustainability</h2>
+    <p>Sustainability is more than just a buzzword – it’s a fundamental concept that underscores the well-being of our planet, its ecosystems, and future generations. The importance of sustainability lies in its ability to ensure a harmonious balance between human progress and environmental preservation. As the global population continues to grow, the challenges to sustaining life on Earth increase, making the practice of sustainability crucial to our survival and prosperity.</p>
+    <a href="https://bluglacier.com/why-is-sustainability-important/"><img src="importance.png" alt="Importance of Sustainability Image" class="fade-in"></a>
+
+    <h2>Sustainable Living Tips</h2>
+    <p>Sustainable living is all about making choices that are better for the planet while maintaining a healthy, fulfilling lifestyle. Every small change we make in our daily routines can collectively have a positive impact on the environment. Below are some simple and effective tips that can help you reduce your ecological footprint and live more sustainably</p>
+    <a href="https://www.outdoors.org/resources/amc-outdoors/conservation-and-climate/go-green-10-tips-for-a-more-sustainable-lifestyle/"><img src="livingtips.png" alt="Sustainable Living Tips Image" class="fade-in"></a>
+
+    <h2>Innovative Sustainable Practices</h2>
+    <p>As the global community faces the challenges of climate change and environmental degradation, innovative sustainable practices are emerging across various industries and sectors. These practices not only reduce our ecological footprint but also provide new ways to meet human needs without depleting natural resources. As the global community faces the challenges of climate change and environmental degradation, innovative sustainable practices are emerging across various industries and sectors. These practices not only reduce our ecological footprint but also provide new ways to meet human needs without depleting natural resources. </p>
+    <a href="https://sustainabilitymag.com/top10/top-10-sustainability-innovations"><img src="practice.jpg" alt="Innovative Sustainable Practices Image" class="fade-in"></a>
+  </div>
+
+<br><br>
+
+  <footer class="global-footer">
+    <div class="footer-container">
+
+      <div class="footer-section">
+        <h4>About Us</h4>
+        <p>
+          We are committed to providing the best experience for our users. Stay connected and explore our content.
+        </p>
+      </div>
+
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href='lifehub.html'>Home</a></li>
+          <li><a href='aboutus.html'>About us </a></li>
+          <li><a href='form.html'>Register</a></li>
+          <li><a href='contactus.html'>Contact us</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/" aria-label="Facebook"><img src="fb.png" alt="Facebook" /></a>
+          <a href="https://x.com/?mx=2" aria-label="Twitter"><img src="twt.png" alt="Twitter" /></a>
+          <a href="https://www.instagram.com/" aria-label="Instagram"><img src="ig.png" alt="Instagram" /></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; LifeHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+
+    function nextSlide() {
+      const slides = document.querySelectorAll('.slide');
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateSlider();
+    }
+
+    function prevSlide() {
+      const slides = document.querySelectorAll('.slide');
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateSlider();
+    }
+
+    function updateSlider() {
+      const slider = document.querySelector('.slider');
+      const offset = -currentSlide * 100;
+      slider.style.transform = `translateX(${offset}%)`;
+    }
+  </script>
+
+</body>
+</html>
