@@ -72,25 +72,26 @@
       z-index: 1;
     }
 
-   
-   /* Menetapkan animasi fade-in */
+  
 img.fade-in {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  visibility: hidden;  
   width: 60%;
   margin: 20px auto;
   display: block;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  visibility: visible; /* Pastikan gambar tetap kelihatan */
 }
 
-/* Kesan hover tetap ada apabila gambar dilihat */
+
 img.fade-in.loaded {
   opacity: 1;
   transform: translateY(0);
+  visibility: visible;  
 }
+
 
 
     img.fade-in:hover {
@@ -104,8 +105,8 @@ img.fade-in.loaded {
     justify-content: space-between;
     align-items: center;
     max-width: 1000px;
-    width: 90%; /* Responsif */
-    margin: 20px auto 50px auto; /* Tambahkan margin bawah */
+    width: 90%; 
+    margin: 20px auto 50px auto; 
     padding: 20px;
     background: white;
     border-radius: 10px;
@@ -352,12 +353,15 @@ body {
 
   <script>
 
-   window.onload = function() {
+  window.onload = function() {
   const images = document.querySelectorAll('img.fade-in');
   images.forEach(image => {
-    image.classList.add('loaded'); // Menambah kelas loaded selepas gambar dimuatkan
+    image.onload = () => {
+      image.classList.add('loaded'); // Tambah kelas 'loaded' hanya selepas gambar dimuat
+    };
   });
 };
+
 
 
     let currentSlide = 0;
