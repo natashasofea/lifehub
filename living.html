@@ -19,7 +19,7 @@
       min-height: 100vh;
     }
 
-    
+    /* Header Styles */
     header {
       background-color: #2e7d32;
       color: white;
@@ -31,14 +31,11 @@
       width: 100%;
     }
 
-
-
-    header h1 {
+   header h1 {
       margin: 0;
       font-size: 50px;
       line-height: 110px;
       font-family: Palatino, serif;
-
     }
 
 .back-button {
@@ -61,6 +58,8 @@
 		
 
    
+   
+    /* Main Content Styles */
     .main {
       max-width: 800px;
       text-align: center;
@@ -72,79 +71,78 @@
       z-index: 1;
     }
 
-  
+    /* Fade-in Effect for Images */
+    img.fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+      width: 60%;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
 
-img.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-  width: 60%;
-  margin: 20px auto;
-  display: block;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-img.fade-in.loaded {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-
+    img.fade-in.loaded {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     img.fade-in:hover {
       opacity: 0.7;
       transform: scale(1.05);
     }
 
-   
-   .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1000px;
-    width: 90%; 
-    margin: 20px auto 50px auto; 
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    flex-grow: 1;
-  }
+       .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      width: 100%;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
 
-  .image-container {
-    flex: 1;
-    max-width: 400px;
-  }
+    /* Left side (image) styling */
+    .image-container {
+      flex: 1;
+      max-width: 500px;
+    }
 
-  .image-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
+    .image-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
 
-  .text-container {
-    flex: 2;
-    padding-left: 20px;
-  }
+    /* Right side (text) styling */
+    .text-container {
+      flex: 1;
+      padding-left: 20px;
+    }
 
-  h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 15px;
-  }
+    h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 15px;
+    }
 
-  p {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.6;
-    text-align: justify;
-  }
+    p {
+      font-size: 1rem;
+      color: #666;
+      line-height: 1.8;
+      text-align: justify;
+    }
 
-  
+    /* Paragraph for Justified text */
+    .justify-text {
+      text-align: justify;
+      margin-top: 20px;
+    }
+
 .global-footer {
   background-color: #f0ebd0;
   background-size: cover;
@@ -244,31 +242,13 @@ body {
   flex-grow: 1; 
 }
 
-
-
-    @media (max-width: 480px) {
-      .card {
-        width: 100%;
-      }
-
-      .sidebar {
-        width: 100%;
-      }
-
-      .main {
-        width: 100%;
-      }
-			
-		
-
-
-
- </style>
+  </style>
 </head>
 <body>
   <header>
     <h1>Sustainable Living</h1>
-   <a href="lifehub.html" class="back-button">Back</a>
+    <a href="lifehub.html" class="back-button">Back</a>
+    
   </header>
 
  
@@ -351,39 +331,32 @@ body {
     </div>
   </footer>
 
+
+ 
   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const images = document.querySelectorAll('img.fade-in');
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('loaded');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
 
-  window.onload = function() {
-  const images = document.querySelectorAll('img.fade-in');
-  images.forEach(image => {
-    image.onload = () => {
-      image.classList.add('loaded');
-    };
-  });
-};
+      images.forEach(image => {
+        observer.observe(image);
+      });
+    });
 
-
-
-    let currentSlide = 0;
-
-    function nextSlide() {
-      const slides = document.querySelectorAll('.slide');
-      currentSlide = (currentSlide + 1) % slides.length;
-      updateSlider();
-    }
-
-    function prevSlide() {
-      const slides = document.querySelectorAll('.slide');
-      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-      updateSlider();
-    }
-
-    function updateSlider() {
-      const slider = document.querySelector('.slider');
-      const offset = -currentSlide * 100;
-      slider.style.transform = `translateX(${offset}%)`;
+   
+    function closeMenu() {
+      const menu = document.getElementById('menu');
+      menu.style.display = 'none';
     }
   </script>
 
-</body>
-</html>
+</body
+</html> 
+
