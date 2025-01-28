@@ -574,27 +574,5 @@ Thus, use spices like turmeric, ginger, and kaffir lime leaf to make fish curry 
     </div>
   </footer>
 
-  <script>
-    let currentSlide = 0;
-
-    function nextSlide() {
-      const slides = document.querySelectorAll('.slide');
-      currentSlide = (currentSlide + 1) % slides.length;
-      updateSlider();
-    }
-
-    function prevSlide() {
-      const slides = document.querySelectorAll('.slide');
-      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-      updateSlider();
-    }
-
-    function updateSlider() {
-      const slider = document.querySelector('.slider');
-      const offset = -currentSlide * 100;
-      slider.style.transform = `translateX(${offset}%)`;
-    }
-  </script>
-
 </body>
 </html>
