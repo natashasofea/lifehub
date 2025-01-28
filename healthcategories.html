@@ -262,6 +262,67 @@
 	   
       <button><a href="https://www.calculator.net/bmi-calculator.html" target="_blank" style="color: white; text-decoration: none;">Check It Now</a></button>
     </section>
+
+ <!-- Footer Section -->
+  <footer class="global-footer">
+    <div class="footer-container">
+      <!-- Section 1: About -->
+      <div class="footer-section">
+        <h4>About Us</h4>
+        <p>
+          We are committed to providing the best experience for our users. Stay connected and explore our content.
+        </p>
+      </div>
+
+      <!-- Section 2: Quick Links -->
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href='lifehub.html'>Home</a></li>
+          <li><a href='aboutus.html'>About us </a></li>
+          <li><a href='form.html'>Register</a></li>
+          <li><a href='contactus.html'>Contact us</a></li>
+        </ul>
+      </div>
+
+      <!-- Section 3: Social Media -->
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><img src="fb.png" alt="Facebook" /></a>
+          <a href="#" aria-label="Twitter"><img src="twt.png" alt="Twitter" /></a>
+          <a href="#" aria-label="Instagram"><img src="ig.png" alt="Instagram" /></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>&copy; LifeHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+
+    function nextSlide() {
+      const slides = document.querySelectorAll('.slide');
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateSlider();
+    }
+
+    function prevSlide() {
+      const slides = document.querySelectorAll('.slide');
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateSlider();
+    }
+
+    function updateSlider() {
+      const slider = document.querySelector('.slider');
+      const offset = -currentSlide * 100;
+      slider.style.transform = `translateX(${offset}%)`;
+    }
+  </script>
 	
 
 
